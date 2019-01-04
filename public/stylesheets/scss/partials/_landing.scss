@@ -1,0 +1,45 @@
+* {
+  font-family: "Open Sans";
+  /*background-color: #222d41;*/
+  /*need to change background color of whole page to be white so you see it on transition*/
+}
+
+p {
+  text-align: center;
+  color: white;
+}
+
+#name {
+  color: white;
+  font-size: 60px;
+}
+
+#specialties {
+  font-size: 15px;
+}
+
+.mainlink {
+  background-color: #847A50;
+  border-radius: 12px;
+  padding: 10px 20px;
+  font-size: 15px;
+  color: white;
+}
+
+body {
+  display: flex;
+  margin-left: 0;
+  width: 100%;
+}
+
+.count-particles {
+  display: none;
+}
+
+.dot {
+  height: 25px;
+  width: 25px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+}

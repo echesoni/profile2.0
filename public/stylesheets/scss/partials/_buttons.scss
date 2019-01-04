@@ -1,0 +1,13 @@
+$block:block;
+$center: 0 auto;
+$none: none;
+$inherit: inherit;
+
+.mainlink {
+  display:$block;
+  margin:$center;
+  a {
+    text-decoration: $none;
+    color: $inherit;
+  }
+}

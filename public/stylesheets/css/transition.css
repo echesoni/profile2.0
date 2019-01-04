@@ -1,0 +1,85 @@
+/* GENERAL STYLES
+-------------------------------------------------*/
+
+body {
+  width: 100%;
+}
+
+
+h1 {
+    /*font-family: 'Raleway';*/
+    font-weight: bold;
+    text-align: center;
+    font-size: 50px;
+    color: #fff;
+    margin: 0;
+}
+
+
+/* PAGES
+-------------------------------------------------*/
+
+#main-page {
+    height: 25px;
+    width: 375px;
+    position: absolute;
+    top: 35%; left: 35%;
+    /*margin: auto;*/
+    /*background-color: #222d41; /* #222d41 sets color of "transition block" */*/
+    /*display: flex;*/
+    /*flex-direction: column;*/
+    /*justify-content: center;*/
+}
+
+.maincontent {
+
+}
+
+
+#next-page {
+  height: 25px;
+  width: 375px;
+	position: absolute;
+	top: 0; bottom: 0; left: 0; right: 0;
+	margin: auto;
+  background-color: #091325; /* need to change background color to #222d41, but keep transition block color = white */
+	display: none;
+}
+
+article.next-page {
+	/*padding-top: 40px;*/
+  /*display: none;*/
+}
+
+/*a.back{
+    font-family: 'Lato';
+    font-size: 20px;
+    color: #dfdfdf;
+    text-decoration: none;
+    text-align: center;
+    width: 20%;
+    margin: 25px auto 30px auto;
+    display: block;
+}*/
+
+
+
+a.mainlink, a.nextlink {
+    font-family: 'Lato';
+    color: #fff;
+    border: 3px solid #fff;
+    padding: 15px 10px;
+    display: block;
+    text-align: center;
+    margin: 25px auto;
+    width: 20%;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+a.mainlink:hover, a.nextlink:hover{
+    background: #fff;
+    color: #575757;
+}

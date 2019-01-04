@@ -1,0 +1,89 @@
+@import 'variables';
+
+@import 'mixins';
+
+@import 'nav';
+
+.cd-main {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.cd-section {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  overflow-y: auto;
+
+  @include backface-visibility(hidden);
+  @include transform(translateZ(0));
+
+  @include transform(translateX(-100%));
+  @include transition(transform 0s $animation-duration);
+
+  &.overflow-hidden {
+    overflow: hidden;
+  }
+
+  header {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    background: $color-1;
+    overflow: hidden;
+  }
+
+  // &.about header {
+  //   background-color: $color-2;
+  // }
+
+  &.visible {
+    position: relative;
+    z-index: 1;
+    -webkit-overflow-scrolling: touch;
+
+    @include transform(translateX(0));
+    @include transition(transform $animation-duration 0s);
+  }
+}
+
+.cd-title {
+  // position: absolute;
+  // top: 50%;
+  // left: 0;
+
+  // padding: 1em;
+  color: $color-6;
+  text-align: center;
+
+  /* Force Hardware Acceleration */
+  @include backface-visibility(hidden);
+  @include transform(translateZ(0));
+
+  opacity: 0;
+  @include transform(translateY(-50%) translateX(-80px));
+  @include transition(transform 0s $animation-duration, opacity 0s $animation-duration);
+
+  h2 {
+    margin: 2em 0 0 0;
+  }
+
+  span {
+    opacity: 0.6;
+  }
+
+  .visible & {
+    opacity: 1;
+    @include transform(translateY(-50%));
+    @include transition(transform 0.4s $animation-duration - 0.2s, opacity 0.4s $animation-duration - 0.2s);
+  }
+
+  @include MQ(M) {
+    h2 {
+      font-size: 2rem;
+    }
+  }
+}
