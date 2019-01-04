@@ -1,2 +1,2 @@
-# profile2.0
+# Personal Profile Page
 profile page highlighting skills and projects
