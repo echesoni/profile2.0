@@ -32,13 +32,17 @@
     position: relative;
     height: 100vh;
     width: 100vw;
-    background: $color-1;
+    background-color: $color-2;
     overflow: hidden;
   }
 
-  // &.about header {
-  //   background-color: $color-2;
-  // }
+  &.about header {
+    background-color: $color-2;
+  }
+
+  &.projects header {
+    background-color: $color-4;
+  }
 
   &.visible {
     position: relative;
