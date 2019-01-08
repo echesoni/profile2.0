@@ -2,21 +2,25 @@
 
 @import 'lib/base/base';
 
-@import 'lib/neat/neat';
-
 @import 'partials/layout';
-
-@import 'partials/landing';
 
 @import 'partials/buttons';
 
 @import 'partials/content';
+
+@import 'partials/landing';
+
+@import 'partials/timeline';
 
 /* --------------------------------
 Primary style
 -------------------------------- */
 *, *::after, *::before {
 	box-sizing: border-box;
+}
+
+svg {
+	width: 0;
 }
 
 html {
@@ -29,10 +33,12 @@ body {
 		family: $primary-font; // variables inside partials > _variables.scss
 	}
 	color: $color-6;
-	background-color: $color-3;
+	// background-color: $color-3;
 }
 
 a {
 	color: $color-2;
 	text-decoration: none;
 }
+
+@import 'partials/grid_settings';
