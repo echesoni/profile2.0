@@ -3,10 +3,13 @@ var upArrow = document.getElementById("btn2");
 
 downArrow.onclick = function () {
     'use strict';
-    document.getElementById("first-list").style = "top:-620px";
-    document.getElementById("second-list").style = "top:-620px";
+    console.log("i've been clicked!");
+    document.getElementById("first-list").style = "top:-570px";
+    // $("first-list").css("top","-605px");
+    document.getElementById("second-list").style = "top:-570px";
     downArrow.style = "display:none";
     upArrow.style = "display:block";
+    $("#type-text").fadeOut();
 };
 
 upArrow.onclick = function () {
@@ -16,45 +19,3 @@ upArrow.onclick = function () {
     upArrow.style = "display:none";
     downArrow.style = "display:block";
 };
-
-
-// creating my image link
-
-var link = document.createElement("a");
-document.body.appendChild(link);
-
-link.href = "https://codepen.io/mo7hamed/pens/public";
-link.target = "_blank";
-
-var photo = document.createElement("img");
-link.appendChild(photo);
-
-photo.src =
-  "https://s3-us-west-2.amazonaws.com/s.cdpn.io/1292524/profile/profile-80.jpg";
-photo.alt = "mo7amed";
-
-photo.style =
-  "border-radius:50%;position:fixed;bottom:20px;right:20px;transition:all 0.5s ease";
-
-photo.onmouseover = function() {
-  this.style.transform = "scale(1.1,1.1)";
-  this.style.boxShadow = "5px 5px 15px #000";
-};
-
-photo.onmouseout = function() {
-  this.style.transform = "scale(1,1)";
-  this.style.boxShadow = "none";
-};
-
-// var i = 0;
-// var txt = 'Hello World...my name is Elaine Chesoni'
-//
-// function typeWriter() {
-//   if (i < txt.length) {
-//     document.getElementById("type-text").innerHTML += txt.charAt(i);
-//     i++;
-//     setTimeout(typeWriter, 60);
-//   }
-// };
-//
-// $(document).ready(typeWriter);
