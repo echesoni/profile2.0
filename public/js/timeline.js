@@ -6,7 +6,7 @@ downArrow.onclick = function () {
     console.log("i've been clicked!");
     document.getElementById("first-list").style = "top:-570px";
     // $("first-list").css("top","-605px");
-    document.getElementById("second-list").style = "top:-570px";
+    document.getElementById("second-list").style = "top:-550px";
     downArrow.style = "display:none";
     upArrow.style = "display:block";
     $("#type-text").fadeOut();
