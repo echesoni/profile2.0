@@ -1,21 +1,25 @@
-var downArrow = document.getElementById("btn1");
-var upArrow = document.getElementById("btn2");
+jQuery(document).ready(function($){
+  var downArrow = $("#btn1"),
+    upArrow = $("#btn2");
 
-downArrow.onclick = function () {
-    'use strict';
-    console.log("i've been clicked!");
-    document.getElementById("first-list").style = "top:-570px";
-    // $("first-list").css("top","-605px");
-    document.getElementById("second-list").style = "top:-550px";
-    downArrow.style = "display:none";
-    upArrow.style = "display:block";
-    $("#type-text").fadeOut();
-};
+  upArrow.css("display","none");
 
-upArrow.onclick = function () {
-    'use strict';
-    document.getElementById("first-list").style = "top:0";
-    document.getElementById("second-list").style = "top:80px";
-    upArrow.style = "display:none";
-    downArrow.style = "display:block";
-};
+  downArrow.on('click', function(event){
+      'use strict';
+      // event.preventDefault;
+      console.log("i've been clicked!");
+      $('#first-list').css("top","-570px");
+      $('#second-list').css("top","-550px");
+      downArrow.fadeOut();
+      upArrow.fadeIn(900);
+      $("#type-text").fadeOut();
+  });
+
+  upArrow.on('click', function(event){
+      'use strict';
+      document.getElementById("first-list").style = "top:0";
+      document.getElementById("second-list").style = "top:80px";
+      upArrow.css("display","none");
+      downArrow.fadeIn(900);
+  });
+});
