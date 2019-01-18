@@ -40,13 +40,6 @@ jQuery(document).ready(function($){
 	    firstLoad = true;
 	});
 
-  	//scroll to content if user clicks the .cd-scroll icon
-	// mainContent.on('click', '.cd-scroll', function(event){
-	// 	event.preventDefault();
-	// 	var scrollId = $(this.hash);
-	// 	$(scrollId).velocity('scroll', { container: $(".cd-section") }, 200);
-	// });
-
 	//start animation
 	function triggerAnimation(newSection, bool) {
 		isAnimating =  true;
@@ -105,4 +98,6 @@ jQuery(document).ready(function($){
 		newSection.removeClass('overflow-hidden').prev('.cd-section').remove();
 		isAnimating =  false;
 	}
+
+	// $.getScript("js/timeline.js");
 });
