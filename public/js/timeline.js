@@ -17,8 +17,8 @@ jQuery(document).ready(function($){
 
   upArrow.on('click', function(event){
       'use strict';
-      document.getElementById("first-list").style = "top:0";
-      document.getElementById("second-list").style = "top:80px";
+      $('#first-list').css("top","0");
+      $('#second-list').css("top","80px");
       upArrow.css("display","none");
       downArrow.fadeIn(900);
   });
